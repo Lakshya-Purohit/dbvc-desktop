@@ -57,7 +57,11 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: |
           cd dist
-          zip -r DBVC-Desktop-Mac.zip DBVC-Desktop.app
+          if [ -d "DBVC-Desktop.app" ]; then
+            zip -r DBVC-Desktop-Mac.zip DBVC-Desktop.app
+          else
+            zip DBVC-Desktop-Mac.zip DBVC-Desktop
+          fi
 
       - name: Release
         uses: softprops/action-gh-release@v2
