@@ -1,0 +1,861 @@
+[2026-05-05 22:56:54] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 22:56:54] [DEBUG  ] [dbvc.main_window  ] Switched to page: Connections
+[2026-05-05 22:56:54] [INFO   ] [dbvc.main_window  ] Main window initialized
+[2026-05-05 22:56:55] [INFO   ] [dbvc.main         ] Application window opened
+[2026-05-05 22:57:33] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:33] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:33] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 22:57:33] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:33] [DEBUG  ] [dbvc.main_window  ] Switched to page: Snapshots
+[2026-05-05 22:57:35] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:35] [DEBUG  ] [dbvc.main_window  ] Switched to page: Compare
+[2026-05-05 22:57:37] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:37] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:37] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 22:57:37] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:37] [DEBUG  ] [dbvc.main_window  ] Switched to page: History
+[2026-05-05 22:57:38] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-05 22:57:38] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 22:57:38] [DEBUG  ] [dbvc.main_window  ] Switched to page: Apply
+[2026-05-05 22:57:39] [DEBUG  ] [dbvc.main_window  ] Switched to page: Logs
+[2026-05-05 22:57:48] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 22:57:48] [DEBUG  ] [dbvc.main_window  ] Switched to page: Connections
+[2026-05-05 22:57:51] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 22:57:53] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 connection profiles
+[2026-05-05 23:22:42] [INFO   ] [dbvc.snapshot_store] Saved new connection profile: production db (11fac10b-f870-47fd-8a8a-75e7eb70fd37)
+[2026-05-05 23:22:45] [DEBUG  ] [dbvc.snapshot_store] Loaded 1 connection profiles
+[2026-05-05 23:23:00] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgrase@12.0.0.1:5432/dummydb_v1
+[2026-05-05 23:23:00] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-05 23:23:00] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgrase:****@12.0.0.1:5432/dummydb_v1
+[2026-05-05 23:23:23] [ERROR  ] [dbvc.db_factory   ] Database connection FAILED: connection to server at "12.0.0.1", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2026-05-05 23:23:45] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgrase@12.0.0.1:5432/dummydb_v1
+[2026-05-05 23:23:45] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-05 23:23:45] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgrase:****@12.0.0.1:5432/dummydb_v1
+[2026-05-05 23:24:06] [ERROR  ] [dbvc.db_factory   ] Database connection FAILED: connection to server at "12.0.0.1", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2026-05-05 23:25:03] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@12.0.0.1:5432/dummydb_v1
+[2026-05-05 23:25:03] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-05 23:25:03] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@12.0.0.1:5432/dummydb_v1
+[2026-05-05 23:25:24] [ERROR  ] [dbvc.db_factory   ] Database connection FAILED: connection to server at "12.0.0.1", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2026-05-06 00:01:20] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:01:20] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:01:20] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:01:31] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:01:40] [INFO   ] [dbvc.snapshot_store] Updated connection profile: production db (11fac10b-f870-47fd-8a8a-75e7eb70fd37)
+[2026-05-06 00:01:40] [DEBUG  ] [dbvc.snapshot_store] Loaded 1 connection profiles
+[2026-05-06 00:02:12] [DEBUG  ] [dbvc.snapshot_store] Loaded 1 connection profiles
+[2026-05-06 00:03:12] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:03:12] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:03:12] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:03:12] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:03:16] [INFO   ] [dbvc.snapshot_store] Saved new connection profile: staging (0c9491ab-997a-48d3-b6a2-cfc0cae9dd46)
+[2026-05-06 00:03:16] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:03:18] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-06 00:03:18] [DEBUG  ] [dbvc.main_window  ] Switched to page: Compare
+[2026-05-06 00:03:30] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:03:30] [DEBUG  ] [dbvc.main_window  ] Switched to page: Connections
+[2026-05-06 00:03:31] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-06 00:03:31] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-06 00:03:31] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:03:31] [DEBUG  ] [dbvc.snapshot_store] Loaded 0 snapshots
+[2026-05-06 00:03:31] [DEBUG  ] [dbvc.main_window  ] Switched to page: Snapshots
+[2026-05-06 00:03:44] [INFO   ] [dbvc.snapshots    ] Taking snapshot for 'production db' (label=)...
+[2026-05-06 00:03:44] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:03:44] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:03:44] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:03:44] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:03:44] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:03:46] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:03:46] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:03:46] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:03:47] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:03:47] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:03:47] [INFO   ] [dbvc.introspection]   → views: 1 objects found
+[2026-05-06 00:03:47] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:03:47] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:03:47] [INFO   ] [dbvc.introspection] Introspection complete: 41 total objects
+[2026-05-06 00:03:47] [INFO   ] [dbvc.snapshot_store] Snapshot saved: 0429dcfb (label=, connection=11fac10b)
+[2026-05-06 00:03:47] [DEBUG  ] [dbvc.snapshot_store] Loaded 1 snapshots
+[2026-05-06 00:03:49] [INFO   ] [dbvc.snapshots    ] Snapshot complete: 0429dcfb — 52 objects
+[2026-05-06 00:03:53] [INFO   ] [dbvc.snapshots    ] Taking snapshot for 'staging' (label=)...
+[2026-05-06 00:03:53] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:03:53] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:03:53] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:03:53] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:03:53] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:03:54] [INFO   ] [dbvc.introspection] Tables introspected: 4 tables found
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:03:54] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:03:54] [INFO   ] [dbvc.introspection]   → functions: 5 objects found
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:03:54] [INFO   ] [dbvc.introspection]   → views: 0 objects found
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:03:54] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:03:54] [INFO   ] [dbvc.introspection] Introspection complete: 6 total objects
+[2026-05-06 00:03:54] [INFO   ] [dbvc.snapshot_store] Snapshot saved: 8009ece9 (label=, connection=0c9491ab)
+[2026-05-06 00:03:54] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:03:56] [INFO   ] [dbvc.snapshots    ] Snapshot complete: 8009ece9 — 10 objects
+[2026-05-06 00:03:58] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:03:58] [DEBUG  ] [dbvc.main_window  ] Switched to page: Compare
+[2026-05-06 00:04:07] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:04:07] [INFO   ] [dbvc.history      ] Comparing snapshots: 0429dcfb ↔ 8009ece9
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:04:08] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:04:13] [INFO   ] [dbvc.history      ] Comparison complete: 42 differences found
+[2026-05-06 00:04:14] [INFO   ] [dbvc.compare      ] Comparison complete: 42 diffs
+[2026-05-06 00:04:15] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:04:15] [INFO   ] [dbvc.history      ] Comparing snapshots: 0429dcfb ↔ 8009ece9
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:04:15] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:04:15] [INFO   ] [dbvc.history      ] Comparison complete: 42 differences found
+[2026-05-06 00:04:16] [INFO   ] [dbvc.compare      ] Comparison complete: 42 diffs
+[2026-05-06 00:04:16] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:04:16] [INFO   ] [dbvc.history      ] Comparing snapshots: 0429dcfb ↔ 8009ece9
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:04:16] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:04:16] [INFO   ] [dbvc.history      ] Comparison complete: 42 differences found
+[2026-05-06 00:04:16] [INFO   ] [dbvc.compare      ] Comparison complete: 42 diffs
+[2026-05-06 00:17:21] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:17:21] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:17:21] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:17:21] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:17:21] [DEBUG  ] [dbvc.main_window  ] Switched to page: History
+[2026-05-06 00:17:27] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:17:27] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:17:28] [DEBUG  ] [dbvc.main_window  ] Switched to page: Apply
+[2026-05-06 00:17:41] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:17:41] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:17:41] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:18:37] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:18:37] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:18:47] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:18:47] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:18:47] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:18:48] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:18:48] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:18:48] [INFO   ] [dbvc.introspection]   → views: 1 objects found
+[2026-05-06 00:18:48] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:18:48] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:18:48] [INFO   ] [dbvc.introspection] Introspection complete: 41 total objects
+[2026-05-06 00:18:48] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 8009ece9
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:18:49] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:18:51] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 42 differences
+[2026-05-06 00:19:37] [DEBUG  ] [dbvc.main_window  ] Switched to page: Logs
+[2026-05-06 00:19:48] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:19:48] [DEBUG  ] [dbvc.main_window  ] Switched to page: Compare
+[2026-05-06 00:19:50] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:19:51] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:19:51] [DEBUG  ] [dbvc.main_window  ] Switched to page: Apply
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:19:53] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v1
+[2026-05-06 00:19:53] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:19:53] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:19:53] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:19:53] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:19:53] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:19:54] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:19:54] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:19:54] [INFO   ] [dbvc.introspection]   → views: 1 objects found
+[2026-05-06 00:19:54] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:19:54] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:19:54] [INFO   ] [dbvc.introspection] Introspection complete: 41 total objects
+[2026-05-06 00:19:54] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 8009ece9
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:19:55] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 42 differences
+[2026-05-06 00:19:55] [DEBUG  ] [dbvc.main_window  ] Switched to page: Logs
+[2026-05-06 00:20:04] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:20:04] [DEBUG  ] [dbvc.main_window  ] Switched to page: Compare
+[2026-05-06 00:20:07] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:20:07] [INFO   ] [dbvc.history      ] Comparing snapshots: 8009ece9 ↔ 8009ece9
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:07] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:07] [INFO   ] [dbvc.history      ] Comparison complete: 0 differences found
+[2026-05-06 00:20:08] [INFO   ] [dbvc.compare      ] Comparison complete: 0 diffs
+[2026-05-06 00:20:09] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:20:09] [INFO   ] [dbvc.history      ] Comparing snapshots: 8009ece9 ↔ 8009ece9
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:09] [INFO   ] [dbvc.history      ] Comparison complete: 0 differences found
+[2026-05-06 00:20:09] [INFO   ] [dbvc.compare      ] Comparison complete: 0 diffs
+[2026-05-06 00:20:17] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:20:17] [INFO   ] [dbvc.history      ] Comparing snapshots: 8009ece9 ↔ 0429dcfb
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:20:18] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:20:18] [INFO   ] [dbvc.history      ] Comparison complete: 42 differences found
+[2026-05-06 00:20:21] [INFO   ] [dbvc.compare      ] Comparison complete: 42 diffs
+[2026-05-06 00:20:23] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:20:23] [INFO   ] [dbvc.history      ] Comparing snapshots: 8009ece9 ↔ 0429dcfb
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:20:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:20:32] [INFO   ] [dbvc.history      ] Comparison complete: 42 differences found
+[2026-05-06 00:20:41] [INFO   ] [dbvc.compare      ] Comparison complete: 42 diffs
+[2026-05-06 00:21:06] [INFO   ] [dbvc.compare      ] Running comparison (mode=0)...
+[2026-05-06 00:21:06] [INFO   ] [dbvc.history      ] Comparing snapshots: 0429dcfb ↔ 8009ece9
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:21:06] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:21:07] [INFO   ] [dbvc.history      ] Comparison complete: 42 differences found
+[2026-05-06 00:21:08] [INFO   ] [dbvc.compare      ] Comparison complete: 42 diffs
+[2026-05-06 00:22:14] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:22:14] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:22:14] [DEBUG  ] [dbvc.main_window  ] Switched to page: Apply
+[2026-05-06 00:22:22] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:22:22] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:22:22] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:22:22] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:22:22] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:22:23] [INFO   ] [dbvc.introspection] Tables introspected: 4 tables found
+[2026-05-06 00:22:23] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:22:23] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:22:23] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:22:23] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:22:23] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:22:23] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:22:24] [INFO   ] [dbvc.introspection]   → functions: 5 objects found
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:22:24] [INFO   ] [dbvc.introspection]   → views: 0 objects found
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:22:24] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:22:24] [INFO   ] [dbvc.introspection] Introspection complete: 6 total objects
+[2026-05-06 00:22:24] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 0429dcfb
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:22:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:22:24] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 42 differences
+[2026-05-06 00:22:37] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:22:37] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:22:37] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:22:37] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:22:37] [INFO   ] [dbvc.executor     ] Applying tables SQL (183 chars)...
+[2026-05-06 00:22:37] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.submodules (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    name character varying NOT NULL,
+    moduleid uuid
+);
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:40] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables submodules → success
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] Applying tables SQL (245 chars)...
+[2026-05-06 00:22:40] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.comments (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    ticketid uuid,
+    userid uuid,
+    message text NOT NULL,
+    createdat
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:40] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables comments → success
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] Applying tables SQL (301 chars)...
+[2026-05-06 00:22:40] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.users (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    name character varying NOT NULL,
+    email character varying NOT NULL,
+    
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:40] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables users → success
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] Applying tables SQL (712 chars)...
+[2026-05-06 00:22:40] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.tickets (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    ticketnumber character varying NOT NULL,
+    title character varying NOT 
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:40] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables tickets → success
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] Applying tables SQL (248 chars)...
+[2026-05-06 00:22:40] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.attachments (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    ticketid uuid,
+    filepath text NOT NULL,
+    filetype character var
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:40] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables attachments → success
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] Applying tables SQL (268 chars)...
+[2026-05-06 00:22:40] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.assignmenthistory (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    ticketid uuid,
+    fromuserid uuid,
+    touserid uuid,
+    reas
+[2026-05-06 00:22:40] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:41] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables assignmenthistory → success
+[2026-05-06 00:22:41] [INFO   ] [dbvc.executor     ] Applying tables SQL (161 chars)...
+[2026-05-06 00:22:41] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE SCHEMA IF NOT EXISTS app;
+
+CREATE TABLE IF NOT EXISTS app.modules (
+    id uuid NOT NULL DEFAULT gen_random_uuid(),
+    name character varying NOT NULL
+);
+[2026-05-06 00:22:41] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:41] [INFO   ] [dbvc.snapshot_store] Apply record saved: tables modules → success
+[2026-05-06 00:22:41] [INFO   ] [dbvc.executor     ] Applying functions SQL (171 chars)...
+[2026-05-06 00:22:41] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.decrypt(BYTEA, BYTEA, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_decrypt$function$
+[2026-05-06 00:22:58] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:58] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions decrypt → success
+[2026-05-06 00:22:58] [INFO   ] [dbvc.executor     ] Applying functions SQL (187 chars)...
+[2026-05-06 00:22:58] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_sym_decrypt(BYTEA, text, text) RETURNS text LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_sym_decrypt_text$function$
+[2026-05-06 00:22:58] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:58] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_sym_decrypt → success
+[2026-05-06 00:22:58] [INFO   ] [dbvc.executor     ] Applying functions SQL (245 chars)...
+[2026-05-06 00:22:58] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_updateticketstatus(p_ticketid UUID, p_status CHARACTER varying) RETURNS void LANGUAGE PLPGSQL AS $function$
+BEGIN
+UPDATE Tickets
+SET Status = p_status,
+UpdatedAt =
+[2026-05-06 00:22:58] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:58] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_updateticketstatus → success
+[2026-05-06 00:22:58] [INFO   ] [dbvc.executor     ] Applying functions SQL (164 chars)...
+[2026-05-06 00:22:58] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.gen_salt(text, integer) RETURNS text LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_gen_salt_rounds$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions gen_salt → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (185 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_sym_encrypt_bytea(BYTEA, text, text) RETURNS BYTEA LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_sym_encrypt_bytea$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_sym_encrypt_bytea → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (184 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.encrypt_iv(BYTEA, BYTEA, BYTEA, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_encrypt_iv$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions encrypt_iv → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (404 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_authenticateuser(p_email CHARACTER varying) RETURNS TABLE(id UUID, name CHARACTER varying, email CHARACTER varying, passwordhash text, ROLE CHARACTER varying, isac
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_authenticateuser → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (169 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.armor(BYTEA, text[], text[]) RETURNS text LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_armor$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions armor → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (519 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_createuser(p_name CHARACTER varying, p_email CHARACTER varying, p_passwordhash text, p_role CHARACTER varying) RETURNS TABLE(id UUID, name CHARACTER varying, email
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_createuser → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (358 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_getsubmodules(p_moduleid UUID DEFAULT NULL::UUID) RETURNS TABLE(id UUID, name CHARACTER varying, moduleid UUID) LANGUAGE PLPGSQL AS $function$
+BEGIN
+IF p_moduleid 
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_getsubmodules → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (162 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.digest(BYTEA, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_digest$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions digest → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (565 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_addcomment(p_ticketid UUID, p_userid UUID, p_message text) RETURNS TABLE(id UUID, ticketid UUID, userid UUID, username CHARACTER varying, message text, createdat t
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_addcomment → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (158 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.crypt(text, text) RETURNS text LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_crypt$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions crypt → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (154 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.fips_mode() RETURNS boolean LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_check_fipsmode$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions fips_mode → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (147 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.gen_random_uuid() RETURNS UUID LANGUAGE c PARALLEL SAFE AS '$libdir/pgcrypto', $function$pg_random_uuid$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions gen_random_uuid → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (177 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_sym_encrypt(text, text, text) RETURNS BYTEA LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_sym_encrypt_text$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_sym_encrypt → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (211 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_armor_headers(text, OUT KEY text, OUT value text) RETURNS
+SETOF record LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_armor_header
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_armor_headers → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (206 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_updateuserstatus(p_id UUID, p_isactive boolean) RETURNS void LANGUAGE PLPGSQL AS $function$
+BEGIN
+UPDATE Users SET IsActive = p_isactive WHERE Id = p_id;
+END;
+$fun
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_updateuserstatus → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (157 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.dearmor(text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_dearmor$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions dearmor → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (1090 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_createticket(p_ticketnumber CHARACTER varying, p_title CHARACTER varying, p_description text, p_moduleid UUID, p_submoduleid UUID, p_source CHARACTER varying, p_pr
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_createticket → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (186 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_pub_encrypt_bytea(BYTEA, BYTEA, text) RETURNS BYTEA LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_pub_encrypt_bytea$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_pub_encrypt_bytea → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (400 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_getusers(p_role CHARACTER varying DEFAULT NULL::CHARACTER varying) RETURNS TABLE(id UUID, name CHARACTER varying, email CHARACTER varying, ROLE CHARACTER varying, 
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_getusers → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (194 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_pub_decrypt(BYTEA, BYTEA, text, text) RETURNS text LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_pub_decrypt_text$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_pub_decrypt → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (195 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_sym_decrypt_bytea(BYTEA, text, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_sym_decrypt_bytea$function$
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:22:59] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_sym_decrypt_bytea → success
+[2026-05-06 00:22:59] [INFO   ] [dbvc.executor     ] Applying functions SQL (185 chars)...
+[2026-05-06 00:22:59] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_getmodules() RETURNS TABLE(id UUID, name CHARACTER varying) LANGUAGE PLPGSQL AS $function$
+BEGIN
+RETURN QUERY SELECT * FROM Modules;
+END;
+$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_getmodules → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (178 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_pub_encrypt(text, BYTEA, text) RETURNS BYTEA LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_pub_encrypt_text$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_pub_encrypt → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (164 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.gen_random_bytes(integer) RETURNS BYTEA LANGUAGE c PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_random_bytes$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions gen_random_bytes → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (533 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_assignticket(p_ticketid UUID, p_assignedto UUID, p_reason text, p_assignedby UUID) RETURNS void LANGUAGE PLPGSQL AS $function$
+DECLARE old_assignee UUID;
+BEGIN
+SEL
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_assignticket → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (1544 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.sp_gettickets(p_status CHARACTER varying DEFAULT NULL::CHARACTER varying, p_priority CHARACTER varying DEFAULT NULL::CHARACTER varying, p_moduleid UUID DEFAULT NULL::
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions sp_gettickets → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (165 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.hmac(BYTEA, BYTEA, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_hmac$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions hmac → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (184 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.decrypt_iv(BYTEA, BYTEA, BYTEA, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_decrypt_iv$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions decrypt_iv → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (202 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_pub_decrypt_bytea(BYTEA, BYTEA, text, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_pub_decrypt_bytea$functio
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_pub_decrypt_bytea → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (162 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.pgp_key_id(BYTEA) RETURNS text LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pgp_key_id_w$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions pgp_key_id → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying functions SQL (171 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: CREATE OR REPLACE FUNCTION public.encrypt(BYTEA, BYTEA, text) RETURNS BYTEA LANGUAGE c IMMUTABLE PARALLEL SAFE STRICT AS '$libdir/pgcrypto', $function$pg_encrypt$function$
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: functions encrypt → success
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] Applying views SQL (123 chars)...
+[2026-05-06 00:23:00] [DEBUG  ] [dbvc.executor     ] SQL preview: 
+SELECT customer_id,
+       name,
+       app.fn_get_customer_total_orders(customer_id) AS total_spent
+FROM app.customers c;
+[2026-05-06 00:23:00] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:00] [INFO   ] [dbvc.snapshot_store] Apply record saved: views vw_customer_summary → success
+[2026-05-06 00:23:04] [INFO   ] [dbvc.apply        ] Bulk apply: 42 success, 0 errors
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:09] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:09] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection]   → views: 0 objects found
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:23:09] [INFO   ] [dbvc.introspection] Introspection complete: 40 total objects
+[2026-05-06 00:23:09] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 0429dcfb
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:09] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:10] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 1 differences
+[2026-05-06 00:23:17] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:17] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:23:17] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:18] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:23:18] [INFO   ] [dbvc.executor     ] Applying views SQL (123 chars)...
+[2026-05-06 00:23:18] [DEBUG  ] [dbvc.executor     ] SQL preview: 
+SELECT customer_id,
+       name,
+       app.fn_get_customer_total_orders(customer_id) AS total_spent
+FROM app.customers c;
+[2026-05-06 00:23:18] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:18] [INFO   ] [dbvc.snapshot_store] Apply record saved: views vw_customer_summary → success
+[2026-05-06 00:23:18] [INFO   ] [dbvc.apply        ] Applied views 'vw_customer_summary' successfully
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:22] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:22] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection]   → views: 0 objects found
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:23:22] [INFO   ] [dbvc.introspection] Introspection complete: 40 total objects
+[2026-05-06 00:23:22] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 0429dcfb
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:22] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:22] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 1 differences
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:23] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:23] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection]   → views: 0 objects found
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:23:23] [INFO   ] [dbvc.introspection] Introspection complete: 40 total objects
+[2026-05-06 00:23:23] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 0429dcfb
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:23] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 1 differences
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:23] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:23:23] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:24] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection] Introspecting tables (type=postgres)...
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection] Tables introspected: 11 tables found
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → assignmenthistory: 6 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → attachments: 5 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → audit_log: 4 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → comments: 5 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → customers: 4 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → modules: 2 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → orders: 4 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → submodules: 3 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → tickets: 17 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → users: 6 columns
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection]   → vw_customer_summary: 3 columns
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection] Introspecting database objects (type=postgres)...
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection] Fetching functions...
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection]   → functions: 39 objects found
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection] Fetching views...
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection]   → views: 0 objects found
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.introspection] Fetching triggers...
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection]   → triggers: 1 objects found
+[2026-05-06 00:23:24] [INFO   ] [dbvc.introspection] Introspection complete: 40 total objects
+[2026-05-06 00:23:24] [INFO   ] [dbvc.history      ] Comparing live DB ↔ snapshot 0429dcfb
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.audit_log (4 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.users (6 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.customers (4 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.attachments (5 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.assignmenthistory (6 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.modules (2 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.vw_customer_summary (3 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.submodules (3 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.comments (5 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.orders (4 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:24] [DEBUG  ] [dbvc.sql_generator] Generated CREATE TABLE for app.tickets (17 columns)
+[2026-05-06 00:23:24] [INFO   ] [dbvc.history      ] Live vs snapshot comparison: 1 differences
+[2026-05-06 00:23:29] [DEBUG  ] [dbvc.validators   ] Built connection string for postgres → postgres@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:29] [INFO   ] [dbvc.db_factory   ] Connecting to database...
+[2026-05-06 00:23:29] [DEBUG  ] [dbvc.db_factory   ] Connection string (masked): postgresql+psycopg2://postgres:****@127.0.0.1:5432/dummydb_v2
+[2026-05-06 00:23:29] [INFO   ] [dbvc.db_factory   ] Database connection successful ✓
+[2026-05-06 00:23:29] [INFO   ] [dbvc.executor     ] Applying views SQL (123 chars)...
+[2026-05-06 00:23:29] [DEBUG  ] [dbvc.executor     ] SQL preview: 
+SELECT customer_id,
+       name,
+       app.fn_get_customer_total_orders(customer_id) AS total_spent
+FROM app.customers c;
+[2026-05-06 00:23:29] [INFO   ] [dbvc.executor     ] SQL applied successfully ✓
+[2026-05-06 00:23:29] [INFO   ] [dbvc.snapshot_store] Apply record saved: views vw_customer_summary → success
+[2026-05-06 00:23:29] [INFO   ] [dbvc.apply        ] Applied views 'vw_customer_summary' successfully
+[2026-05-06 00:23:42] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:23:42] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:23:42] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 connection profiles
+[2026-05-06 00:23:42] [DEBUG  ] [dbvc.snapshot_store] Loaded 2 snapshots
+[2026-05-06 00:23:43] [DEBUG  ] [dbvc.main_window  ] Switched to page: History
+[2026-05-06 00:23:53] [DEBUG  ] [dbvc.main_window  ] Switched to page: Logs
