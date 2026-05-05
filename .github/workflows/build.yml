@@ -62,9 +62,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            dist/DBVC-Desktop-Windows.exe
-            dist/DBVC-Desktop-Linux
-            dist/DBVC-Desktop-Mac.zip
+          files: dist/DBVC-Desktop*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
