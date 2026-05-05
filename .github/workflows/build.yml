@@ -1,0 +1,70 @@
+name: Build Release Binaries
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install System Dependencies (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unixodbc-dev
+
+      - name: Install System Dependencies (Mac)
+        if: matrix.os == 'macos-latest'
+        run: |
+          brew install unixodbc
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build with PyInstaller
+        run: |
+          pyinstaller build.spec
+
+      - name: Prepare Artifacts (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: bash
+        run: |
+          mv dist/DBVC-Desktop.exe dist/DBVC-Desktop-Windows.exe
+
+      - name: Prepare Artifacts (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          mv dist/DBVC-Desktop dist/DBVC-Desktop-Linux
+
+      - name: Prepare Artifacts (Mac)
+        if: matrix.os == 'macos-latest'
+        run: |
+          cd dist
+          zip -r DBVC-Desktop-Mac.zip DBVC-Desktop.app
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/DBVC-Desktop-Windows.exe
+            dist/DBVC-Desktop-Linux
+            dist/DBVC-Desktop-Mac.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
