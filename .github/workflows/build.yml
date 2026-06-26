@@ -43,7 +43,7 @@ jobs:
 
       - name: Build with PyInstaller
         run: |
-          pyinstaller build.spec
+            pyinstaller build.spec
 
       - name: Prepare Artifacts (Windows)
         if: matrix.os == 'windows-latest'
