@@ -1,10 +1,12 @@
 """
 Apply Page — apply schema changes to a target database.
+Professional UI with clear source/target indicators and progress tracking.
 """
 
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
     QComboBox, QMessageBox, QGroupBox, QScrollArea, QCheckBox,
+    QFrame, QProgressBar, QSizePolicy,
 )
 from PyQt6.QtCore import Qt
 
@@ -13,14 +15,32 @@ from app.services.validators import build_connection_string
 from app.services.db_factory import get_engine
 from app.services.executor import apply_sql
 from app.services.history import compare_snapshots, compare_live_vs_snapshot
-from app.services.introspection import fetch_tables, fetch_objects
+from app.services.introspection import fetch_tables, fetch_objects, OBJECT_TYPES
 from app.services.errors import AppError
 from app.ui.diff_viewer import DiffViewer
 from app.logger import get_logger
 
 log = get_logger("apply")
 
-APPLY_ORDER = ["tables", "functions", "views", "triggers"]
+APPLY_ORDER = ["tables"] + list(OBJECT_TYPES)
+
+# Human-readable names
+_TYPE_LABELS = {
+    "tables": "Tables",
+    "functions": "Functions",
+    "procedures": "Procedures",
+    "aggregates": "Aggregates",
+    "views": "Views",
+    "materialized_views": "Mat. Views",
+    "triggers": "Triggers",
+    "sequences": "Sequences",
+}
+
+# Status badge config
+_STATUS_CONFIG = {
+    "missing_in_source": ("badgeMissingSource", "⚠ MISSING IN TARGET DB", "This object is in the snapshot but not in the live target — it will be created."),
+    "modified":          ("badgeModified",       "✎ MODIFIED",            "This object differs between snapshot and live target — it will be updated."),
+}
 
 
 class ApplyPage(QWidget):
@@ -36,16 +56,20 @@ class ApplyPage(QWidget):
         title = QLabel("Apply Changes")
         title.setObjectName("sectionTitle")
         layout.addWidget(title)
-        subtitle = QLabel("Select a source snapshot and target DB to apply missing objects in safe order.")
+        subtitle = QLabel("Select a source snapshot and target DB to apply missing or modified objects in safe dependency order.")
         subtitle.setObjectName("sectionSubtitle")
         layout.addWidget(subtitle)
 
         # ── Config ───────────────────────────────────────────────────
         config_group = QGroupBox("Configuration")
         cg_layout = QVBoxLayout(config_group)
+        cg_layout.setSpacing(10)
 
         r1 = QHBoxLayout()
-        r1.addWidget(QLabel("Source Snapshot:"))
+        src_label = QLabel("📸  Source Snapshot:")
+        src_label.setMinimumWidth(150)
+        src_label.setStyleSheet("font-weight: 600;")
+        r1.addWidget(src_label)
         self.snap_combo = QComboBox()
         self.snap_combo.setMinimumWidth(350)
         r1.addWidget(self.snap_combo)
@@ -53,7 +77,10 @@ class ApplyPage(QWidget):
         cg_layout.addLayout(r1)
 
         r2 = QHBoxLayout()
-        r2.addWidget(QLabel("Target Connection:"))
+        tgt_label = QLabel("🎯  Target Connection:")
+        tgt_label.setMinimumWidth(150)
+        tgt_label.setStyleSheet("font-weight: 600;")
+        r2.addWidget(tgt_label)
         self.target_combo = QComboBox()
         self.target_combo.setMinimumWidth(350)
         r2.addWidget(self.target_combo)
@@ -71,6 +98,28 @@ class ApplyPage(QWidget):
 
         layout.addWidget(config_group)
 
+        # ── Summary Stats ────────────────────────────────────────────
+        self.stats_frame = QFrame()
+        self.stats_frame.setStyleSheet(
+            "background: rgba(30, 41, 59, 120); border: 1px solid #334155; border-radius: 12px;"
+        )
+        self.stats_frame.setVisible(False)
+        stats_layout = QHBoxLayout(self.stats_frame)
+        stats_layout.setContentsMargins(16, 10, 16, 10)
+
+        self.stat_total = self._make_stat("0", "Applicable")
+        self.stat_missing = self._make_stat("0", "Missing in Target")
+        self.stat_modified = self._make_stat("0", "Modified")
+
+        stats_layout.addWidget(self.stat_total)
+        stats_layout.addWidget(self._make_divider())
+        stats_layout.addWidget(self.stat_missing)
+        stats_layout.addWidget(self._make_divider())
+        stats_layout.addWidget(self.stat_modified)
+        stats_layout.addStretch()
+
+        layout.addWidget(self.stats_frame)
+
         # ── Results ──────────────────────────────────────────────────
         self.results_area = QScrollArea()
         self.results_area.setWidgetResizable(True)
@@ -81,17 +130,60 @@ class ApplyPage(QWidget):
         layout.addWidget(self.results_area)
 
         # ── Apply All Button ─────────────────────────────────────────
+        bottom_bar = QHBoxLayout()
+
         self.apply_all_btn = QPushButton("⚡ Apply All (Safe Order)")
         self.apply_all_btn.setProperty("cssClass", "primary")
         self.apply_all_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.apply_all_btn.clicked.connect(self._apply_all)
         self.apply_all_btn.setVisible(False)
-        layout.addWidget(self.apply_all_btn)
+        self.apply_all_btn.setMinimumHeight(40)
+        bottom_bar.addWidget(self.apply_all_btn)
+
+        bottom_bar.addStretch()
 
         self.status_label = QLabel("")
         self.status_label.setObjectName("sectionSubtitle")
-        layout.addWidget(self.status_label)
+        bottom_bar.addWidget(self.status_label)
 
+        layout.addLayout(bottom_bar)
+
+    # ── Helpers ──────────────────────────────────────────────────
+    @staticmethod
+    def _make_stat(number, label):
+        w = QWidget()
+        l = QVBoxLayout(w)
+        l.setContentsMargins(12, 0, 12, 0)
+        l.setSpacing(2)
+        l.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        n = QLabel(number)
+        n.setObjectName("statNumber")
+        n.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        lb = QLabel(label)
+        lb.setObjectName("statLabel")
+        lb.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        l.addWidget(n)
+        l.addWidget(lb)
+        w._num_label = n
+        return w
+
+    @staticmethod
+    def _make_divider():
+        d = QFrame()
+        d.setFixedWidth(1)
+        d.setStyleSheet("background-color: #334155;")
+        d.setFixedHeight(40)
+        return d
+
+    def _update_stats(self, diffs):
+        n_missing = sum(1 for d in diffs if d["status"] == "missing_in_source")
+        n_mod = sum(1 for d in diffs if d["status"] == "modified")
+        self.stat_total._num_label.setText(str(len(diffs)))
+        self.stat_missing._num_label.setText(str(n_missing))
+        self.stat_modified._num_label.setText(str(n_mod))
+        self.stats_frame.setVisible(len(diffs) > 0)
+
+    # ── Data Loading ─────────────────────────────────────────────
     def refresh(self):
         self.snap_combo.clear()
         self.target_combo.clear()
@@ -124,6 +216,7 @@ class ApplyPage(QWidget):
             applicable = [d for d in diffs if d["status"] in ("missing_in_source", "modified")]
 
             self.pending_diffs = applicable
+            self._update_stats(applicable)
             self._render_apply_list(applicable)
             self.apply_all_btn.setVisible(len(applicable) > 0)
             self.status_label.setText(f"{len(applicable)} change(s) can be applied")
@@ -134,6 +227,7 @@ class ApplyPage(QWidget):
             QMessageBox.critical(self, "Error", f"❌ {e}")
             log.error("Load diffs error: %s", e, exc_info=True)
 
+    # ── Render ───────────────────────────────────────────────────
     def _render_apply_list(self, diffs):
         while self.results_layout.count():
             item = self.results_layout.takeAt(0)
@@ -148,32 +242,75 @@ class ApplyPage(QWidget):
             return
 
         for diff in diffs:
-            card = QGroupBox(f"{diff['name']} ({diff['type']})")
+            card = QGroupBox()
+            card.setProperty("diffStatus", diff["status"])
+            card.style().unpolish(card)
+            card.style().polish(card)
             cl = QVBoxLayout(card)
+            cl.setSpacing(8)
 
+            # ── Header ───────────────────────────────────────────
+            header = QHBoxLayout()
+            header.setSpacing(10)
+
+            name_label = QLabel(f"<b style='font-size:14px'>{diff['name']}</b>")
+            name_label.setTextFormat(Qt.TextFormat.RichText)
+            header.addWidget(name_label)
+
+            # Type tag
+            type_display = _TYPE_LABELS.get(diff["type"], diff["type"].replace("_", " ").title())
+            type_tag = QLabel(type_display.upper())
+            type_tag.setObjectName("badgeTypeTag")
+            type_tag.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            type_tag.setFixedHeight(22)
+            header.addWidget(type_tag)
+
+            header.addStretch()
+
+            # Status badge
             status = diff["status"]
-            badge = QLabel(status.replace("_", " ").upper())
-            if "missing" in status:
-                badge.setObjectName("badgeMissing")
-            else:
-                badge.setObjectName("badgeModified")
-            cl.addWidget(badge)
+            cfg = _STATUS_CONFIG.get(status, ("badgeModified", status.upper(), ""))
+            badge = QLabel(cfg[1])
+            badge.setObjectName(cfg[0])
+            badge.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            badge.setFixedHeight(26)
+            badge.setToolTip(cfg[2])
+            header.addWidget(badge)
 
+            cl.addLayout(header)
+
+            # ── Direction indicator ──────────────────────────────
+            if status == "missing_in_source":
+                direction = QLabel("📦  Snapshot → Target DB  —  this object will be CREATED in the target")
+                direction.setStyleSheet("color: #fbbf24; font-size: 11px; padding: 2px 4px; font-style: italic;")
+                cl.addWidget(direction)
+            elif status == "modified":
+                direction = QLabel("🔄  Snapshot → Target DB  —  this object will be UPDATED in the target")
+                direction.setStyleSheet("color: #60a5fa; font-size: 11px; padding: 2px 4px; font-style: italic;")
+                cl.addWidget(direction)
+
+            # ── Diff viewer ──────────────────────────────────────
             viewer = DiffViewer(diff["source_sql"], diff["target_sql"])
-            viewer.setMinimumHeight(200)
+            viewer.setMinimumHeight(180)
             viewer.setMaximumHeight(300)
             cl.addWidget(viewer)
 
-            apply_btn = QPushButton(f"⚡ Apply {diff['name']}")
+            # ── Apply button ─────────────────────────────────────
+            btn_row = QHBoxLayout()
+            btn_row.addStretch()
+            apply_btn = QPushButton(f"⚡ Apply '{diff['name']}'")
             apply_btn.setProperty("cssClass", "primary")
             apply_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+            apply_btn.setMinimumWidth(200)
             apply_btn.clicked.connect(lambda _, d=diff, b=apply_btn: self._apply_single(d, b))
-            cl.addWidget(apply_btn)
+            btn_row.addWidget(apply_btn)
+            cl.addLayout(btn_row)
 
             self.results_layout.addWidget(card)
 
         self.results_layout.addStretch()
 
+    # ── Apply Actions ────────────────────────────────────────────
     def _apply_single(self, diff, btn):
         target_id = self.target_combo.currentData()
         if not target_id:
@@ -199,6 +336,9 @@ class ApplyPage(QWidget):
             self.store.save_apply_record(target_id, sql, diff["type"], diff["name"], "success")
             btn.setText("✅ Applied")
             btn.setEnabled(False)
+            btn.setProperty("cssClass", "secondary")
+            btn.style().unpolish(btn)
+            btn.style().polish(btn)
             log.info("Applied %s '%s' successfully", diff["type"], diff["name"])
 
         except AppError as e:
@@ -213,9 +353,10 @@ class ApplyPage(QWidget):
         if not target_id or not self.pending_diffs:
             return
 
+        order_str = " → ".join(APPLY_ORDER)
         reply = QMessageBox.question(self, "Confirm Bulk Apply",
             f"Apply all {len(self.pending_diffs)} changes in safe order?\n\n"
-            "Order: tables → functions → views → triggers",
+            f"Order: {order_str}",
             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
         if reply != QMessageBox.StandardButton.Yes:
             return
@@ -250,6 +391,10 @@ class ApplyPage(QWidget):
                 msg += f"\n\n❌ {len(errors)} failed:\n" + "\n".join(errors)
             QMessageBox.information(self, "Apply Results", msg)
             log.info("Bulk apply: %d success, %d errors", success, len(errors))
+
+            # Refresh the list to show updated state
+            if success > 0:
+                self._load_diffs()
 
         except Exception as e:
             QMessageBox.critical(self, "Error", f"❌ {e}")

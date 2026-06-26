@@ -8,6 +8,7 @@ from typing import Optional
 from app.services.snapshot_store import SnapshotStore
 from app.services.normalizer import normalize
 from app.services.sql_generator import generate_create_table_sql
+from app.services.introspection import OBJECT_TYPES
 from app.logger import get_logger
 
 log = get_logger("history")
@@ -72,8 +73,8 @@ def compare_snapshots(store: SnapshotStore, snap_id_1: str, snap_id_2: str) -> l
                     "target_sql": sql2,
                 })
 
-    # ── Object diffs (functions, views, triggers) ────────────────────
-    for obj_type in ("functions", "views", "triggers"):
+    # ── Object diffs (all tracked object types) ───────────────────────
+    for obj_type in OBJECT_TYPES:
         objs1 = schema1.get(obj_type, {})
         objs2 = schema2.get(obj_type, {})
 
@@ -159,7 +160,7 @@ def compare_live_vs_snapshot(
                 })
 
     # Objects
-    for obj_type in ("functions", "views", "triggers"):
+    for obj_type in OBJECT_TYPES:
         live_objs = live_objects.get(obj_type, {})
         snap_objs = schema.get(obj_type, {})
 

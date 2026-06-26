@@ -4,4 +4,6 @@ psycopg2-binary>=2.9
 pyodbc>=5.0
 sqlparse>=0.5
 cryptography>=42.0
+packaging>=23.0
 pyinstaller>=6.0
+

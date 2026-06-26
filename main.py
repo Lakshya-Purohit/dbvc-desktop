@@ -7,6 +7,7 @@ import sys
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import Qt
 
+from app.config import APP_VERSION
 from app.ui.styles import apply_theme
 from app.ui.main_window import MainWindow
 from app.logger import get_logger
@@ -16,12 +17,12 @@ log = get_logger("main")
 
 def main():
     log.info("=" * 60)
-    log.info("DBVC Desktop starting...")
+    log.info("DBVC Desktop v%s starting...", APP_VERSION)
     log.info("=" * 60)
 
     app = QApplication(sys.argv)
     app.setApplicationName("DBVC Desktop")
-    app.setApplicationVersion("1.0.0")
+    app.setApplicationVersion(APP_VERSION)
 
     # Apply dark theme
     apply_theme(app)

@@ -1,5 +1,5 @@
 """
-Main window — sidebar navigation + stacked pages.
+Main window — sidebar navigation + stacked pages + auto-update checker.
 """
 
 from PyQt6.QtWidgets import (
@@ -7,9 +7,10 @@ from PyQt6.QtWidgets import (
     QPushButton, QStackedWidget, QLabel, QStatusBar, QSizePolicy,
 )
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QIcon
 
+from app.config import APP_VERSION
 from app.services.snapshot_store import SnapshotStore
+from app.services.update_checker import UpdateChecker
 from app.logger import get_logger
 
 log = get_logger("main_window")
@@ -69,11 +70,34 @@ class MainWindow(QMainWindow):
 
         sidebar_layout.addStretch()
 
+        # Update banner (hidden by default, shown when update is available)
+        self.update_banner = QPushButton("🚀 Update Available!")
+        self.update_banner.setStyleSheet("""
+            QPushButton {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                    stop:0 #1e40af, stop:1 #7c3aed);
+                color: #e0e7ff;
+                border: 1px solid #4f46e5;
+                border-radius: 8px;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 12px;
+            }
+            QPushButton:hover {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                    stop:0 #2563eb, stop:1 #8b5cf6);
+            }
+        """)
+        self.update_banner.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.update_banner.setVisible(False)
+        self.update_banner.clicked.connect(self._show_update_dialog)
+        sidebar_layout.addWidget(self.update_banner)
+
         # Version label
-        version_label = QLabel("v1.0.0")
-        version_label.setObjectName("sidebarVersion")
-        version_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        sidebar_layout.addWidget(version_label)
+        self.version_label = QLabel(f"v{APP_VERSION}")
+        self.version_label.setObjectName("sidebarVersion")
+        self.version_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        sidebar_layout.addWidget(self.version_label)
 
         credits_label = QLabel("Made with ❤️ by Lakshya Purohit")
         credits_label.setObjectName("sidebarVersion")
@@ -118,8 +142,15 @@ class MainWindow(QMainWindow):
         # Default to connections page
         self._switch_page(0)
 
+        # ── Auto-Update Checker ──────────────────────────────────────
+        self._pending_update = None  # (version, url, notes)
+        self._update_checker = UpdateChecker()
+        self._update_checker.on_update_available(self._on_update_available)
+        self._update_checker.start()
+
         log.info("Main window initialized")
 
+    # ── Navigation ───────────────────────────────────────────────────
     def _switch_page(self, index: int):
         """Switch the stacked widget to the given page index."""
         self.stack.setCurrentIndex(index)
@@ -139,3 +170,32 @@ class MainWindow(QMainWindow):
             current.refresh()
 
         log.debug("Switched to page: %s", page_names[index])
+
+    # ── Update Handling ──────────────────────────────────────────────
+    def _on_update_available(self, version: str, url: str, notes: str):
+        """Called from the update checker when a newer release exists."""
+        self._pending_update = (version, url, notes)
+
+        # Show the sidebar banner
+        self.update_banner.setText(f"🚀 Update {version}")
+        self.update_banner.setVisible(True)
+
+        # Update the version label to indicate outdated
+        self.version_label.setText(f"v{APP_VERSION} (outdated)")
+        self.version_label.setStyleSheet("color: #fbbf24;")
+
+        # Show the popup notification immediately
+        self._show_update_dialog()
+
+    def _show_update_dialog(self):
+        """Display the update notification dialog."""
+        if not self._pending_update:
+            return
+
+        version, url, notes = self._pending_update
+
+        # Import here to avoid circular imports
+        from app.ui.update_dialog import UpdateDialog
+
+        dialog = UpdateDialog(version, url, notes, parent=self)
+        dialog.exec()

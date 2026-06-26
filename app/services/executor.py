@@ -42,7 +42,7 @@ def apply_sql(engine, sql: str, obj_type: str = "") -> None:
         if "does not exist" in msg:
             raise AppError(
                 "Cannot apply — required dependencies do not exist yet. "
-                "Apply base objects first (tables → functions → views → triggers)."
+                "Apply base objects first (tables before other objects)."
             )
 
         raise AppError(f"Failed to apply database object: {e.orig}")
