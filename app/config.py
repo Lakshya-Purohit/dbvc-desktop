@@ -6,7 +6,7 @@ import os
 import sys
 
 APP_NAME = "DBVC"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0.6"
 
 # ── Data directory (%APPDATA%/DBVC) ──────────────────────────────────────
 if sys.platform == "win32":
