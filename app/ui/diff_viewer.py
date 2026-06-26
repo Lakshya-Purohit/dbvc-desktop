@@ -86,6 +86,7 @@ class _DiffEditor(QPlainTextEdit):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+        self._real_line_numbers: list[int | None] = []
         self.setReadOnly(True)
         self.setFont(QFont("Cascadia Code", 11))
         self.setLineWrapMode(QPlainTextEdit.LineWrapMode.NoWrap)
@@ -93,7 +94,6 @@ class _DiffEditor(QPlainTextEdit):
         self.blockCountChanged.connect(self._update_line_area_width)
         self.updateRequest.connect(self._update_line_area)
         self._update_line_area_width()
-        self._real_line_numbers: list[int | None] = []
 
     def set_line_numbers(self, numbers: list[int | None]):
         self._real_line_numbers = numbers
