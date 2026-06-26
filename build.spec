@@ -8,7 +8,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('app/resources/logo.png', 'app/resources')],
     hiddenimports=[
         'psycopg2',
         'psycopg2._psycopg',
@@ -46,5 +46,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=None,
+    icon='app/resources/logo.ico',
 )

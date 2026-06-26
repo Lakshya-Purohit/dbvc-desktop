@@ -7,8 +7,9 @@ from PyQt6.QtWidgets import (
     QPushButton, QStackedWidget, QLabel, QStatusBar, QSizePolicy,
 )
 from PyQt6.QtCore import Qt, QSize
+from PyQt6.QtGui import QIcon
 
-from app.config import APP_VERSION
+from app.config import APP_VERSION, get_resource_path
 from app.services.snapshot_store import SnapshotStore
 from app.services.update_checker import UpdateChecker
 from app.logger import get_logger
@@ -24,6 +25,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("DBVC Desktop — Database Version Control")
         self.setMinimumSize(1200, 750)
         self.resize(1400, 850)
+        self.setWindowIcon(QIcon(get_resource_path("app/resources/logo.png")))
 
         # Shared store
         self.store = SnapshotStore()
